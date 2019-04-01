@@ -3,6 +3,7 @@ const   express = require('express'),
         bodyParser = require('body-parser'),
         path = require('path'),
         fs = require('fs'),
+        HTMLParser = require('node-html-parser'),
         fetch = require('node-fetch'),
         port = process.env.PORT || 5000;
 
@@ -17,15 +18,7 @@ app.use(express.static('app/static'));
 app.get('/samenwerken', renderSamenwerken);
 
 function renderSamenwerken(req, res) {
-    fetch('https://www.cmd-amsterdam.nl/wp-json/wp/v2/pages/758')
-        .then(function(response) {
-            return response.json();
-        })
-        .then(function(data) {
-            res.render('pages/samenwerken', {
-                data: data.content.rendered
-            });
-        });
+    
 }
 
 app.listen(port, function() {
