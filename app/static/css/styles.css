@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,700');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    box-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+}
+
+.header__nav {
+    width: 100%;
+}
+
+.header__nav-list {
+    list-style: none;
+
+    display: flex;
+    align-items: center;
+
+    margin: 0 75px;
+}
+
+.header__nav-list li {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 0 10px;
+}
+
+.header__nav-list li:first-of-type {
+    flex-grow: 1;
+}
+
+.header__nav-list li:first-of-type img {
+    width: 200px;
+    height: auto;
+}
+
+.header__nav-list li:last-of-type {
+    background-image: url(../img/search-icon.svg);
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+
+    margin-left: 50px;
+}
+
+.header__nav-list li a {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 12px;
+    padding: 10px 0;
+    display: inline-block;
+}
+
+.header__nav-list li a:hover {
+    /* border-bottom: 3px solid black; */
+}
+
+
+
+
+
+
+/* Section slider */
+section.slider {
+    background-image: url(https://www.cmd-amsterdam.nl/wp-content/uploads/2018/11/cmd_daantjebons_0025-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -100px;
+    width: 100%;
+    height: 75vh;
+}
+
+.slider__content {
+    position: absolute;
+    top: 53%;
+    left: 90px;
+    transform: translateY(-50%);
+}
+
+.slider__content .button {
+    display: inline-block;
+    margin-top: 40px;
+}
+
+/* Article */
+.article {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+    padding: 40px 90px;
+}
+
+.article--icon {
+    align-items: center;
+}
+
+.artice--img {
+    align-items: top;
+}
+
+.article--icon img {
+    width: 300px;
+    height: 100%;
+    margin: 0 50px;
+}
+
+.article--icon-big img {
+    width: 400px;
+}
+
+.article--img img {
+    width: 400px;
+    height: 100%;
+    margin-right: 2%;
+}
+
+.article--img-big img {
+    width: 600px;
+}
+
+.article--yellow {
+    background-color: #FFF021;
+}
+
+.article__content {
+    flex-grow: 1;
+}
+
+.article__video {
+    margin-right: 2%;
+}
+
+.article__content .button {
+    display: inline-block;
+}
+
+
+
+
+
+.footer {
+    margin-top: 40px;
+    background-color: #595959;
+    color: white;
+    padding: 20px 90px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.footer__copyright {
+    font-size: 12px;
+    font-weight: 400;
+    flex-grow: 1;
+    text-transform: uppercase;
+}
+
+.footer__social-media-icons {
+    list-style: none;
+}
+
+.footer__social-media-icons li {
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+
+    display: inline-block;
+    margin: 0 5px;
+}
+
+.footer__social-media-icons .icon-twitter {
+    background-image: url(../img/social-icons/icon-twitter.svg);
+}
+
+.footer__social-media-icons .icon-facebook {
+    background-image: url(../img/social-icons/icon-facebook.svg);
+}
+
+.footer__social-media-icons .icon-vimeo {
+    background-image: url(../img/social-icons/icon-vimeo.svg);
+}
+
+.footer__social-media-icons .icon-linkedin {
+    background-image: url(../img/social-icons/icon-linkedin.svg);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Utilities */
+.button {
+    padding: 13px 17px;
+    background-color: black;
+    color: white;
+    text-transform: uppercase;
+    font-size: 12px;
+    border-radius: 2px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+a {
+    cursor: pointer;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 700;
+    margin: 0;
+}
+
+h2 {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 0;
+}
+
+h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 10px;
+}
+
+.paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
+    padding-bottom: 20px;
+    margin: 0;
+}
+
+.paragraph--big {
+    font-size: 20px;
+    line-height: 28px;
+    font-weight: 300;
+}
