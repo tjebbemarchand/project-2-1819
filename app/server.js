@@ -25,10 +25,11 @@ function renderSamenwerken(req, res) {
         })
         .then(function(json) {
             return sanitizeHtml(json.content.rendered, {
-                allowedTags: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'a', 'ul', 'ol', 'li', 'b', 'i', 'strong', 'em', 'strike', 'code', 'hr', 'br', 'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre', 'iframe', 'img' ],
+                allowedTags: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'a', 'ul', 'ol', 'li', 'b', 'i', 'strong', 'em', 'strike', 'code', 'hr', 'br', 'div', 'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre', 'iframe', 'img' ],
                 allowedAttributes: {
                   'a': [ 'href' ],
-                  'img': [ 'src' ]
+                  'img': [ 'src' ],
+                  'div': [ 'class' ]
                 },
                 transformTags: {
                     'span': 'h2'
