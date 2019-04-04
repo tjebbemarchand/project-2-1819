@@ -8,6 +8,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Open Sans', sans-serif;
+    font-display: swap;
 }
 
 /* Header navbar */
@@ -75,12 +76,31 @@ body {
 
 /* Section slider */
 section.slider {
-    background-image: url(https://www.cmd-amsterdam.nl/wp-content/uploads/2018/11/cmd_daantjebons_0025-1.jpg);
+    /* background-image: url(../img/responsive-images/cmd_daantjebons_0025-1_dmhwyu_c_scale,w_958.jpg); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 0 -100px;
     width: 100%;
     height: 75vh;
+}
+
+/* Responsive images in CSS */
+@media only screen and (min-width: 320px) {
+    section.slider {
+        background-image: url(../img/responsive-images/slider-image-397.jpg);
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    section.slider {
+        background-image: url(../img/responsive-images/slider-image-600.jpg);
+    }
+}
+
+@media only screen and (min-width: 950px) {
+    section.slider {
+        background-image: url(../img/responsive-images/slider-image-958.jpg);
+    }
 }
 
 .slider__content {
@@ -102,6 +122,11 @@ section.slider {
     flex-wrap: nowrap;
 
     padding: 40px 90px;
+}
+
+.rotate {
+    animation: rotate 2s infinite linear;
+    transform-origin: center;
 }
 
 .article--yellow {
@@ -178,9 +203,14 @@ section.slider {
     background-size: cover;
     width: 20px;
     height: 20px;
-    margin: 0 5px;
+    margin: 0 8px;
 
     display: inline-block;
+}
+
+.footer__social-media-icons li a {
+    color: transparent;
+    /* width: 1em; */
 }
 
 .footer__social-media-icons .icon-twitter {
@@ -199,6 +229,7 @@ section.slider {
     background-image: url(../img/social-icons/icon-linkedin.svg);
 }
 
+
 /* Utilities */
 .button {
     padding: 13px 17px;
@@ -214,8 +245,22 @@ section.slider {
 
 .button:hover {
     background-color: white;
+    border: 2px solid black;
     color: black;
     font-weight: 700;
+    padding: 11px 11px;
+}
+
+section.article--yellow:hover {
+    background-color: #fceb05;
+}
+
+img {
+    transition: transform 200ms ease;
+}
+
+img:hover {
+    transform: scale(1.05);
 }
 
 a {
@@ -234,10 +279,19 @@ h2 {
     margin: 0;
 }
 
+h3:hover {
+    transform: scale(1.1);
+    transform-origin: left;
+}
+
 h3 {
     font-size: 26px;
     font-weight: 700;
     margin: 0 0 10px;
+}
+
+.border-heading {
+    /* border: 3px solid black; */
 }
 
 .paragraph {
@@ -253,4 +307,9 @@ h3 {
     font-size: 20px;
     line-height: 28px;
     font-weight: 300;
+}
+
+.inline-link {
+    color: black;
+    text-decoration: underline;
 }

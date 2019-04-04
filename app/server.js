@@ -14,7 +14,14 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static('app/static'));
 
+enableCompression();
+
 app.get('/samenwerken', renderSamenwerken);
+
+app.get('/offline', function(req, res) {
+    res.render('pages/offline');
+});
+
 
 function renderSamenwerken(req, res) {
     res.render('pages/samenwerken');
@@ -78,10 +85,12 @@ function renderSamenwerken(req, res) {
             // res.render('pages/samenwerken', {
             //     data: html
             // });
-
         })
     }) */
-    
+}
+
+function enableCompression() {
+   
 }
 
 app.listen(port, function () {
