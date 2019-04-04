@@ -1,5 +1,10 @@
 # CMD Amsterdam
 
+![Screenshot applicatie](./docs/screenshot.jpg)
+
+## Beschrijving
+De samenwerken pagina van de CMD Amsterdam website nagebouwd en daarvan de prestaties en toegankelijkheid verbeterd.
+
 ## Huidige problemen
 Op de huidige website van CMD Amsterdam, heb ik onderzoek gedaan naar de "prestaties" en de "toegankelijkheid" van de website. Daar zijn een aantal punten uitgekomen die nog matig zijn.
 

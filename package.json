@@ -9,7 +9,9 @@
   "scripts": {
     "start": "node app/server.js",
     "dev": "nodemon app/server.js",
-    "build:css": "node app/gulp/styles.js"
+    "build": "run-s build:*",
+    "build:css": "node app/gulp/styles.js",
+    "build:js": "node app/gulp/scripts.js"
   },
   "repository": {
     "type": "git",

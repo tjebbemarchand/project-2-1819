@@ -32,7 +32,7 @@ function renderSamenwerken(req, res) {
         })
         .then(function(json) {
             return sanitizeHtml(json.content.rendered, {
-                allowedTags: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'a', 'ul', 'ol', 'li', 'b', 'i', 'strong', 'em', 'strike', 'code', 'hr', 'br', 'div', 'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre', 'iframe', 'img' ],
+                allowedTags: [ 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'p', 'span', 'a', 'ul', 'ol', 'li', 'b', 'i', 'strong', 'em', 'strike', 'code', 'hr', 'br', 'table', 'thead', 'caption', 'tbody', 'tr', 'th', 'td', 'pre', 'iframe', 'img' ],
                 allowedAttributes: {
                   'a': [ 'href' ],
                   'img': [ 'src' ],
@@ -47,9 +47,19 @@ function renderSamenwerken(req, res) {
             const rx1 = /\[.+\]/g;
             // <(\w+)(?:\s+\w+="[^"]+(?:"\$[^"]+"[^"]+)?")*>\s*</\1> // Delete empty HTML tags
             return normalHtml = html.replace(rx1, "");
+
         })
+        // .then(function(cleanUpHTML) {
+        //     res.send(cleanUpHTML);
+        // })
         .then(function(html) {
-            res.send(html);
+            // res.send(html);
+
+            console.log(html);
+
+            res.render('pages/samenwerken', {
+                data: html 
+            });
         }); */
 
    /* https.get("https://www.cmd-amsterdam.nl/wp-json/wp/v2/pages/758", response => {
