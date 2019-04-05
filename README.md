@@ -44,6 +44,7 @@ Door de korte tijd heb ik besloten om een andere aanpak te gebruiken. Ik heb de 
 Na sommige punten van de prestaties en toegankelijkheid doorgevoerd te hebben zijn dit de resultaten geworden.
 
 De volgende punten heb ik toegepast
+
 **Prestaties:**
 - Te grote afbeeldingen worden gebruikt
 - Alle afbeeldingen van de pagina worden gelijk ingeladen
