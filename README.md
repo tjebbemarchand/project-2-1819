@@ -10,7 +10,7 @@ Op de huidige website van CMD Amsterdam, heb ik onderzoek gedaan naar de "presta
 
 ![Audit test before optimisations](./docs/audit-before.jpg)
 
-### Prestaties
+### Prestaties:
 - Eerste render van de pagina na 30 seconden op langzaam 3G verbinding
 - Teveel scripts worden in geladen door plugins
 - Plugins scripts worden bovenin de HTML geladen waardoor dat de render tegenhoud
